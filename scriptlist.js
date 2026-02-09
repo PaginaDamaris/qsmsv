@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let position = -Math.random() * (list.scrollHeight / 2);
 
-  const speed = 0.2;
+  const speed = 0.15;
 
   function animate() {
     position -= speed;
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     items.forEach(item => {
       const rect = item.getBoundingClientRect();
       const middle = rect.top + rect.height / 2;
-      if (Math.abs(middle - center) < 27.5) {
+      if (Math.abs(middle - center) < 9) {
         item.classList.add("active");
       } else {
         item.classList.remove("active");
@@ -31,5 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function goBack() {
   window.history.back();
 }
+
+
 
 
