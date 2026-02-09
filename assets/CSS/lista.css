@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  height: 100vh;
+  overflow: hidden;
+  font-family: system-ui, sans-serif;
+  color: white;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 25%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.container::before {
+  top: 0;
+  background: linear-gradient(to bottom, black, transparent);
+}
+
+.container::after {
+  bottom: 0;
+  background: linear-gradient(to top, black, transparent);
+}
+
+.infinite-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  position: absolute;
+}
+
+.infinite-list li {
+  font-size: 1.2rem;
+  padding: 12px 0;
+  opacity: 0.25;
+  font-weight: 300;
+  transition: 
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    font-size 0.4s ease,
+    font-weight 0.4s ease;
+}
+
+
+.infinite-list li.active {
+  opacity: 1;
+  font-size: 1.3rem;        
+  font-weight: 700;      
+  transform: scale(2.08);
+}
+
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 10px 16px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 
+    background 0.3s ease,
+    transform 0.2s ease,
+    opacity 0.3s ease;
+  opacity: 0.8;
+  z-index: 1000;
+}
+
+.back-btn:hover {
+  background-color: #fff; 
+    color: #333;
+}
+
+ul,
+li {
+  list-style: none !important;
+}
+
+ul {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+li::marker {
+  content: none !important;
+}
+
+li::before {
+  content: none !important;
+}

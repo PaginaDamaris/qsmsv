@@ -1,0 +1,154 @@
+.banner {
+    position: relative;   /* ← ESTO ES CLAVE */
+    width: 100%;
+    margin: auto;
+    padding-top: 110px;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    color: #fff;
+    background-image: url(../images/Banner/Banner.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.banner::before {
+    content: '';
+    position: absolute;
+    inset: 0; 
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+
+.banner_description {
+    position: relative;
+    z-index: 1;
+}
+
+
+.banner_description h1 {
+    color: #ffffff;
+}
+
+.banner a {
+    display: block;
+    padding: 10px 10px;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 150px;
+    font-weight: 700;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.banner a:hover {
+    color: black;
+    background: #fff;
+    transition: all 200ms;
+}
+
+header {
+  z-index: -1;
+}
+
+footer {
+    background: black;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 2px;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+
+.valentin-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9998;
+}
+
+.valentin-card {
+  background: linear-gradient(135deg, #2a1930, #1b0f24);
+  padding: 35px 30px;
+  border-radius: 25px;
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 40px rgba(186, 104, 200, 0.35);
+  animation: valentinPop 0.6s ease;
+}
+
+.question-text {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #f3e5f5;
+  line-height: 1.4;
+}
+
+.valentin-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.valentin-buttons button {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+#yesBtn {
+  background: linear-gradient(135deg, #ce93d8, #ab47bc);
+  color: #2b0033;
+}
+
+#yesBtn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(206, 147, 216, 0.6);
+}
+
+#noBtn {
+  background: transparent;
+  border: 2px solid #b39ddb;
+  color: #e1bee7;
+}
+
+#noBtn:hover {
+  background: rgba(179, 157, 219, 0.15);
+  transform: scale(0.95);
+}
+
+@keyframes valentinPop {
+  from {
+    opacity: 0;
+    transform: scale(0.85) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
