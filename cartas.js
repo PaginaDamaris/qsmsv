@@ -7,7 +7,7 @@ const cards = [
   {
     title: "San valentín 2026",
     date: "2026-02-14",
-    link: "carta.html"
+    link: "carta2.html"
   }
 ];
 
@@ -34,3 +34,4 @@ cards.forEach(card => {
 
   container.appendChild(div);
 });
+
